@@ -1,0 +1,988 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;1,100&display=swap");
+* {
+  font-family: 'Archivo', sans-serif;
+}
+
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2017/06/20/17/15/wall-2423815__340.jpg");
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 20px;
+}
+
+/*<!----------------- ENCABEZADO Inicio ----------------->*/
+.navbar-toggler {
+  background-color: white;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+  background-color: brown;
+}
+
+.navbar-expand-md {
+  background-color: brown;
+}
+
+.navbar-expand-md .navbar-img {
+  border: white;
+  border-style: solid;
+  border-radius: 10%;
+}
+
+.navbar-expand-md .nav-link {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-expand-md .nav-link:hover {
+  color: black;
+}
+
+/*<!----------------- ENCABEZADO Cierre ----------------->*/
+/*<!----------------- INDEX Inicio ----------------->*/
+.div-bienvenidos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-content: center;
+}
+
+.div-bienvenidos .h1-bienvenidos {
+  font-family: 'Archivo', sans-serif;
+  font-size: 3rem;
+  color: brown;
+  font-weight: 800;
+}
+
+.contenedor_index {
+  width: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: (auto)[1];
+      grid-template-rows: repeat(1, auto);
+      grid-template-areas: "div_parrafo_index div_imagen_index";
+}
+
+.div_parrafo_index {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: div_parrafo_index;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  float: left;
+  margin-top: 50px;
+  margin-left: 150px;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, transform 2s;
+  transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
+}
+
+.div_parrafo_index .obertura {
+  font-size: 2rem;
+}
+
+.div_parrafo_index .portada {
+  font-family: 'Archivo', sans-serif;
+  font-style: italic;
+  font-weight: 1000;
+  font-size: 1rem;
+}
+
+.div_parrafo_index:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.div_imagen_index {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: div_imagen_index;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  margin-top: 70px;
+  right: 0px;
+}
+
+.div_imagen_index .imagenportada {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+}
+
+/*<!----------------- INDEX Cierre ----------------->*/
+/*<!----------------- BIOGRAFIA Inicio ----------------->*/
+.biografia_div {
+  font-family: 'Archivo', sans-serif;
+  padding: 15px;
+}
+
+.biografia_div .titulo_biografia {
+  color: brown;
+  font-weight: bold;
+  margin-left: 20px;
+  font-size: 2rem;
+}
+
+.biografia_div .biografia_texto {
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  font-weight: bold;
+  font-family: 'Archivo', sans-serif;
+  font-size: 1rem;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.biografia_div .titulo_biografia {
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 20px;
+    width: 100%;
+  }
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 20px;
+    width: 100%;
+  }
+}
+
+/*<!----------------- BIOGRAFIA Cierre ----------------->*/
+/*<!----------------- OBRAS Inicio ----------------->*/
+.obras {
+  display: -ms-grid;
+  display: grid;
+  font-family: 'Archivo', sans-serif;
+  -ms-grid-columns: 600px 600px;
+      grid-template-columns: 600px 600px;
+  -ms-grid-rows: 600px 600px 600px 600px 600px 600px;
+      grid-template-rows: 600px 600px 600px 600px 600px 600px;
+  grid-auto-flow: row;
+      grid-template-areas: "obra1 obra2" "obra3 obra4" "obra5 obra6" "obra7 obra8" "obra9 obra10" "obra11 obra12";
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  padding-left: 80px;
+  padding-bottom: 100px;
+}
+
+.obras .obra1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: obra1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.obras .obra1 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra2, .obras .obra4, .obras .obra6, .obras .obra8 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: obra2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.obras .obra2 img, .obras .obra4 img, .obras .obra6 img, .obras .obra8 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: obra3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.obras .obra3 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: obra4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.obras .obra4 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: obra5;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.obras .obra5 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: obra6;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.obras .obra6 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra7 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: obra7;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.obras .obra7 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra8 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: obra8;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 50px;
+}
+
+.obras .obra8 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra9 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: obra9;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.obras .obra9 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra10 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: obra10;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 50px;
+  margin-top: 100px;
+}
+
+.obras .obra10 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra11 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: obra11;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6/7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.obras .obra11 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+.obras .obra12 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 2;
+  grid-area: obra12;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 1;
+  grid-row: 6/7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 1rem;
+  font-weight: bold;
+  padding-left: 50px;
+  margin-top: 100px;
+}
+
+.obras .obra12 img {
+  border-style: solid;
+  border-color: brown;
+  padding: 5px;
+  float: left;
+}
+
+/*<!----------------- OBRAS Cierre ----------------->*/
+/*<!----------------- PARTICIPACIONES Inicio ----------------->*/
+.titulo-tabla {
+  margin: 80px;
+  font-size: 50px;
+  font-weight: 800;
+}
+
+th {
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+td {
+  padding: 10px;
+  font-weight: 600;
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .titulo-tabla {
+    margin: 0;
+    font-size: 30px;
+    text-align: center;
+    padding: 3px;
+  }
+}
+
+/*<!----------------- PARTICIPACIONES Cierre ----------------->*/
+/*<!----------------- CONTACTO Inicio ----------------->*/
+.container-contacto {
+  width: 600px;
+  font-family: 'Archivo', sans-serif;
+  font-weight: bold;
+  padding: 25px;
+  margin-left: 25%;
+}
+
+.container-contacto .h2contacto {
+  font-weight: bold;
+  font-family: 'Archivo', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.container-contacto .btn-primary {
+  background-color: brown;
+}
+
+.container-contacto .btn-primary:hover {
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .container-contacto {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border: 2px solid black;
+    /* padding-left: 100p; */
+  }
+}
+
+/*<!----------------- CONTACTO Cierre ----------------->*/
+/*<!----------------- FOOTER Inicio ----------------->*/
+.footer {
+  position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem 1rem;
+  background-color: brown;
+  margin-top: 50px;
+}
+
+.footer .footer_contacto {
+  font-family: 'Archivo', sans-serif;
+  float: right;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-right: 100px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer a:hover {
+  color: black;
+}
+
+.footer .firmafooter {
+  border: white;
+  border-style: solid;
+  border-radius: 10%;
+  float: left;
+  margin-left: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 56px;
+  width: 151px;
+}
+
+.footer .footer_redes {
+  position: absolute;
+  left: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer .footer_redes .instagram {
+  margin-right: 200px;
+  height: 50px;
+  width: 50px;
+}
+
+.footer .footer_redes .facebook {
+  height: 50px;
+  width: 50px;
+}
+
+@media (max-width: 769px) {
+  .contenedor_index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  img {
+    width: auto;
+  }
+  .h1-bienvenidos {
+    text-align: center;
+  }
+  .portada {
+    text-align: left;
+  }
+}
+
+@media (max-width: 769px) {
+  .footer img {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .div_parrafo_index {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 769px) {
+  .div_parrafo_index {
+    text-align: center;
+    /* margin-left: 0; */
+  }
+}
+
+@media (max-width: 769px) {
+  .obras {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+        grid-template-areas: "." "." "." "." "." "." "." "." "." "." ".";
+  }
+  .obras img {
+    padding: 5px;
+    border: 1px solid brown;
+    width: 200px;
+    height: 350px;
+  }
+}
+
+@media (min-width: 780px) {
+  .obras {
+    gap: 50px;
+  }
+  .obras img {
+    padding: 5px;
+    border: 1px solid brown;
+  }
+}
+
+@media (min-width: 800px) {
+  .contenedor_index img {
+    width: 400px;
+    height: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  .footer_contacto {
+    margin-left: 80px;
+  }
+}
+
+@media (max-width: 700px) {
+  .firmafooter {
+    height: 20px;
+    width: 40px;
+    margin-left: none;
+  }
+}
+
+/*<!----------------- FOOTER Cierre ----------------->*/
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.pintura--obra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  justify-items: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.obra2, .obra4, .obra6, .obra8 {
+  padding-left: 50px;
+}
+
+.div_portada {
+  width: 800px;
+  height: 1200px;
+}
+
+.div_imagenportada {
+  width: 800px;
+  height: 1200px;
+}
+/*# sourceMappingURL=estilosconsass.css.map */

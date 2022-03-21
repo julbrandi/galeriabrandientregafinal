@@ -1,0 +1,43 @@
+$obras: (
+    obra1: bold,
+    obra2: bold,
+    obra3: bold,
+    obra4: bold,
+    obra5: bold,
+    obra6: bold,
+    obra7: bold,
+    obra8: bold,
+    );
+
+@each $obra, $negrita in $obras {
+    .pintura--#{obra} {
+        display: flex;
+        flex-direction: row;
+        justify-items: center;
+        align-items: baseline;
+        font-size: 20px;
+        font-weight: $negrita;
+    }
+}
+
+
+.obra2{
+    padding-left: 50px;
+}
+
+.obra4, .obra6, .obra8{
+    @extend .obra2;
+}
+
+@mixin  portada($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+.div_portada {
+    @include portada(800px, 1200px)
+}
+
+.div_imagenportada {
+    @include portada(800px, 1200px)
+}
